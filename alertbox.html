@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Alert</title>
+    
+</head>
+<body onload="displayGreeting()">
+    <div style="background-color:yellow; width:auto; height:auto; padding-top: 2%;">
+        <h1  style="color:rgb(0, 8, 255); text-align:center">Greeting With Respect </h1>
+    <script>
+        function displayGreeting() {
+          let now = new Date();
+            let hours = now.getHours();
+            let greeting;
+
+            if (hours < 12) {
+                greeting = "Good morning!";
+            } else if (hours < 18) {
+                greeting = "Good afternoon!";
+            } else {
+                greeting = "Good evening!";
+            }
+
+            window.alert(greeting);
+        }
+    </script>
+</body>
+</html>

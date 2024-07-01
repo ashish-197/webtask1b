@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form> 
+
+
+        Enter 1st Number <input type="number" id="firstNo" value=""> <br>
+        Enter 2nd Number <input type="number" id="secondNo" value=""> <br>
+        
+        <button type="button" id="add" onclick="calculate(this.id)">+</button>
+        <button type="button" id="sub" onclick="calculate(this.id)">-</button>
+        <button type="button" id="mul" onclick="calculate(this.id)">*</button>
+        <button type="button" id="div" onclick="calculate(this.id)">/</button>
+
+    </form>
+
+    <p>Result = <span id="result"></span></p>
+
+    
+    <script>
+        function calculate(btnId){
+            var n1 = Number(document.getElementById("firstNo").value);
+            var n2 = Number(document.getElementById("secondNo").value);
+            var result = document.getElementById("result");
+
+            if(btnId == "add"){
+                var res = n1+n2;
+                result.innerHTML = res;
+                window.alert(res)
+            } else if(btnId == "sub"){
+                var res = n1-n2;
+                result.innerHTML = res;
+                window.alert(res)
+            } else if(btnId == "mul"){
+                var res = n1*n2;
+                result.innerHTML = res;
+                window.alert(res)
+            } else if(btnId == "div"){
+                var res = n1/n2;
+                result.innerHTML = res;
+                window.alert(res)
+            }
+
+        }
+    </script>   
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>UserName</label>
+        <input type="text" name="userId" id="userId" value="">
+        <br>
+        <label>Password</label>
+        <input type="password" name="pwd" id="pwd" value="">
+        <br>
+        <button type="button" onclick="details()" >Submit</button>
+    </form>
+
+    <form>
+        <input type="text" placeholder="Enter color" id="inputColor" value="">
+        <button type="button" onclick="changeColor()">Change</button>
+    </form>
+    
+    <h1 id="color">Change my colour</h1>
+    <script>
+        function details() {
+            //e.preventDefault();
+            var userId = document.getElementById("userId").value;
+            var password = document.getElementById("pwd").value;
+            console.log("User Id - ",userId)
+            console.log("Password - ",password)
+        }
+         
+        function changeColor() {
+            let ch = document.getElementById("color");
+            var textColor = document.getElementById("inputColor").value;
+            ch.style.color = textColor;
+        }
+        
+    </script>
+</body>
+</html>
